@@ -6,7 +6,7 @@ databases:
 
 services:
   - type: web
-    name: horilla
+    name: horilla-hrms
     runtime: docker
     plan: starter
     dockerfilePath: ./Dockerfile
@@ -31,9 +31,9 @@ services:
       - key: DEBUG
         value: "False"
       - key: ALLOWED_HOSTS
-        value: horilla.onrender.com,.onrender.com
+        value: horilla-hrms.onrender.com,horilla-7ir6.onrender.com,.onrender.com
       - key: CSRF_TRUSTED_ORIGINS
-        value: https://horilla.onrender.com
+        value: https://horilla-hrms.onrender.com,https://horilla-7ir6.onrender.com
       - key: TIME_ZONE
         value: Asia/Kolkata
       - key: DB_INIT_PASSWORD

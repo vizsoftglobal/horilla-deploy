@@ -35,3 +35,5 @@ services:
         value: Asia/Kolkata
       - key: DB_INIT_PASSWORD
         generateValue: true
+      - key: WHITE_LABELLING
+        value: "True"

@@ -58,6 +58,6 @@ SIDEBARS = [
     "project",
 ]
 
-WHITE_LABELLING = False
+WHITE_LABELLING = settings.env.bool("WHITE_LABELLING", default=False)
 NESTED_SUBORDINATE_VISIBILITY = False
 TWO_FACTORS_AUTHENTICATION = False

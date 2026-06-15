@@ -17,10 +17,7 @@ services:
       name: horilla-media
       mountPath: /app/media
       sizeGB: 5
-    dockerCommand: >-
-      bash -c "python3 manage.py migrate --noinput &&
-      python3 manage.py collectstatic --noinput &&
-      exec gunicorn --bind 0.0.0.0:$PORT horilla.wsgi:application"
+    dockerCommand: bash /app/scripts/render-start.sh
     envVars:
       - key: DATABASE_URL
         fromDatabase:

@@ -21,7 +21,7 @@ COPY --from=builder /install /usr/local
 
 COPY . .
 
-RUN chmod +x /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh /app/scripts/render-start.sh
 
 EXPOSE 8000
 
